@@ -16,5 +16,3 @@ int main ()
 	create_process ("ls", arg_list);
 	return 0;
 }
-
-//
