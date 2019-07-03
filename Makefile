@@ -1,8 +1,8 @@
 TARGET		:= exe
 OBJS		:= main.o 
 CC         	:= g++
-DIR			:= .
-CXXFLAG     := -Wall -ggdb -std=gnu++11  
+DIR		:= .
+CXXFLAG     	:= -Wall -ggdb -std=gnu++11  
 LDFLAGS		:=  
 LIBS		:= ./mylib/mylibs.so 
 $(TARGET):$(OBJS) 
