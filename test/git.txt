@@ -1,18 +1,15 @@
-git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）
-
+**新提交文件
+git add .                   （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来）
 git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要，如“first commit”）
-
 git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
 
 
-
-删除本地文件后，想从远程仓库中从新Pull最新版文件。
-Git提示：up-to-date，但未得到删除的文件
-原因：当前本地库处于另一个分支中，需将本分支发Head重置至master.
+**删除本地文件后，想从远程仓库中从新Pull最新版文件。
+Git提示：up-to-date，但未得到删除的文件 原因：当前本地库处于另一个分支中，需将本分支发Head重置至master.
 git checkout master 
 git reset --hard
 
-git 强行pull并覆盖本地文件
+**git 强行pull并覆盖本地文件
 git fetch --all  
 git reset --hard origin/master 
 git pull
