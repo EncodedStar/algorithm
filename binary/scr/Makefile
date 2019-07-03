@@ -1,4 +1,4 @@
-TARGET      := mylibs.so                               
+TARGET      := ../../mylib/mylibs.so                               
 LDFLAGS     := -shared -fPIC
 OBJS        := binary.o 
 CC          := g++
@@ -9,4 +9,5 @@ $(TARGET): $(OBJS)
 $(OBJS): binary.cpp
 	$(CC) $(CXXFLAGS) -c binary.cpp -o binary.o
 clean:                                                   
-	rm -rf $(TARGET) $(OBJS)
+	rm -rf $(OBJS)
+	rm -rf ../../mylib/mylibs.so
