@@ -1,0 +1,6 @@
+
+gcc -o libhello.so hello.c -shared -fPIC
+cp libhello.so /lib64/
+g++ test.cpp -o test -lhello
+g++ -shared -fPIC -o libworld.so world.cpp
+g++ -shared -fPIC -o libmid.so mid.cpp -lworld 

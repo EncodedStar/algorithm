@@ -1,10 +1,10 @@
-TARGET		:= exe
+TARGET		:= E_luatest
 OBJS		:= main.o 
 CC			:= g++
 DIR			:= .
 CXXFLAG		:= -Wall -ggdb -std=gnu++11  
 LDFLAGS		:=  
-LIBS		:= ./mylib/mylibs.so 
+LIBS		:= -llua -lm -ldl /usr/local/lib/liblua.a
 $(TARGET):$(OBJS) 
 	$(CC) $(LDFLAGS) $^ $(LIBS) -o $(TARGET)
 main.o: main.cpp
