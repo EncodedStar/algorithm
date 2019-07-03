@@ -1,0 +1,21 @@
+TARGET		:= TEXT
+OBJS		:= main.o TEXT.o redis.o pro_package.o tool.o
+CC         	:= g++
+DIR		:= ..
+CXXFLAG     	:= -Wall -I. -I.. -I$(DIR)/common/include -ggdb -std=gnu++11  
+LDFLAGS		:= -Wl,-rpath=../common -L../common 
+LIBS		:= -lamqpcpp -ljsoncpp -levent -lboost_system -ldl -lhiredis
+$(TARGET):$(OBJS) 
+	$(CC) $(LDFLAGS) $^ $(LIBS) -o $(TARGET)
+main.o: main.cpp
+	$(CC) $(CXXFLAG) -c main.cpp -o main.o
+TEXT.o: TEXT.cpp
+	$(CC) $(CXXFLAG) -c TEXT.cpp -o TEXT.o
+redis.o: redis.cpp
+	$(CC) $(CXXFLAG) -c redis.cpp -o redis.o
+pro_package.o: $(DIR)/common/src/pro_package.cpp
+	$(CC) $(CXXFLAG) -c $(DIR)/common/src/pro_package.cpp -o pro_package.o
+tool.o: $(DIR)/common/src/tool.cpp
+	$(CC) $(CXXFLAG) -c $(DIR)/common/src/tool.cpp -o tool.o
+clean:  
+	rm -rf $(TARGET) $(OBJS)
