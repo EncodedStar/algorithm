@@ -4,6 +4,6 @@
 
 namespace myLib
 {
-int count_binary(int n);
+	int count_binary(int n);
 }
 #endif

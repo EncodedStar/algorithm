@@ -1,6 +1,5 @@
 #include<iostream>
 #include"binary.h"
-using namespace std;
 
 /************************************************** 
  *  * @file binary.cpp
@@ -11,13 +10,13 @@ using namespace std;
 
 namespace myLib
 {
-int count_binary(int n) {
-	int res = 0;
-	while (n != 0) {
-		n = n & (n - 1);
-		res++;
+	int count_binary(int n) {
+		int res = 0;
+		while (n != 0) {
+			n = n & (n - 1);
+			res++;
+		}
+		return res;
 	}
-	return res;
-}
 }
 
