@@ -1,10 +1,12 @@
 #include<iostream>
-#include"binary.h"
+#include"binary/include/binary.h"
 using namespace std;
 
 int main()
 {
-	cout << count_binary(9) << endl;
+	cout << "hello" << endl;
+	cout << myLib::count_binary(1) << endl;
+	cout << myLib::count_binary(9) << endl;
 }
 
 
