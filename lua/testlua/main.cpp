@@ -10,7 +10,7 @@ using namespace std;
    }  
    int main(int argc,char *argv[])  
    {  
-	       //1.创建Lua状态  
+	   //1.创建Lua状态  
 	   lua_State *L = luaL_newstate();  
 	   if (L == NULL)  
 	   {  
