@@ -5,5 +5,6 @@
 namespace myLib
 {
 	int count_binary(int n);
+	std::string toHex(int num);
 }
 #endif
