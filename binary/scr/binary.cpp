@@ -1,4 +1,3 @@
-#include<iostream>
 #include"binary.h"
 namespace myLib
 {
@@ -33,6 +32,30 @@ namespace myLib
 		}
 		return ans;
 	}
+
+/************************************************** 
+ *  * @file binary.cpp
+ *  * @author EncodedStar
+ *  * @date 2019.7.5
+ *  * @function int转化string and vector<string>
+ ***************************************************/
+	 std::string int2String(int n) {
+		std::stringstream tmpss;
+		std::string tmps;
+		tmpss.clear();
+		tmpss << n;
+		tmpss >> tmps;
+		tmpss.str("");
+		return tmps;
+	 }
+	 vector<string> int2VString(int n) {
+		 vector<string> tmpv;
+		 for(int i = 1; i <= n; i++)
+		 {
+			tmpv.push_back(int2String(i));
+		 }
+		 return tmpv;
+	 }
 
 }
 
