@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 #include <cstring>
 #include "binary/include/binary.h"
 using namespace std;
@@ -31,6 +32,20 @@ struct Test2
 	float b;
 	int c;
 }; 
+int lengthOfLongestSubstring(string s) {
+	int n = s.length();
+	map<char, int> Map_tmp;
+	map<char, int>::iterator iter; 
+	int i= 0, ans = 0;
+	for(int j = 0; j<n; j++){
+		if( (iter = Map_tmp.find(s[j])) != Map_tmp.end() ){
+			i = max(i, iter->second);
+		} 
+		ans = max(ans, j-i+1);
+		Map_tmp[(s[j])] = j+1;
+	}
+	return ans;
+}
 
 int main()
 {
@@ -58,6 +73,7 @@ int main()
 //	}
 //	cout << s << endl;
 //	cout << t << endl;
+	cout << lengthOfLongestSubstring("abcabcbbcc") << endl;
 }
 
 
