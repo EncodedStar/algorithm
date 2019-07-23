@@ -47,6 +47,30 @@ int lengthOfLongestSubstring(string s) {
 	return ans;
 }
 
+void Qsort(int arr[], int low, int high){
+	if (high <= low) return;
+	int i = low;
+	int j = high+1;
+	int key = arr[low];
+	while(true)
+	{
+		while(arr[++i] < key)
+		{
+			if(i == high)
+				break;
+		}
+		while(arr[--j] > key)
+		{
+			if(j == low)
+				break;
+		}
+		if (i >= j) break;
+		swap(arr[i],arr[j]);
+	}
+	swap(arr[low],arr[j]);
+	Qsort(arr, low, j - 1);
+	Qsort(arr, j + 1, high);
+}
 int main()
 {
 //	cout << myLib::count_binary(1) << endl;
@@ -73,7 +97,12 @@ int main()
 //	}
 //	cout << s << endl;
 //	cout << t << endl;
-	cout << lengthOfLongestSubstring("abcabcbbcc") << endl;
+//	cout << lengthOfLongestSubstring("abcabcbbcc") << endl;
+	int a[] = {123123,1,3,23,3434,53,57, 68, 59, 52, 72, 28, 96, 33, 24};
+	Qsort(a, 0, sizeof(a) / sizeof(a[0]) - 1);/*这里原文第三个参数要减1否则内存越界*/
+	for(unsigned int i = 0; i < sizeof(a) / sizeof(a[0]); i++)
+	{
+		cout << a[i] << " ";
+	}
 }
-
 
