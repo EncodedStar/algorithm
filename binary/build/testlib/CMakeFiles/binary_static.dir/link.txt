@@ -1,0 +1,2 @@
+/usr/bin/ar cr ../../lib/libbinary.a  CMakeFiles/binary_static.dir/binary.cpp.o
+/usr/bin/ranlib ../../lib/libbinary.a

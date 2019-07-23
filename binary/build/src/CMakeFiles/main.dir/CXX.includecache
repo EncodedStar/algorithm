@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../src/../testlib/binary.h
+iostream
+-
+string
+-
+sstream
+-
+vector
+-
+
+/root/github/algorithm/binary/src/main.cpp
+iostream
+-
+map
+-
+cstring
+-
+binary.h
+/root/github/algorithm/binary/src/binary.h
+

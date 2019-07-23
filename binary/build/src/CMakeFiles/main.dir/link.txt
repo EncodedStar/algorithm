@@ -1,0 +1,1 @@
+/usr/bin/c++       CMakeFiles/main.dir/main.cpp.o  -o ../../bin/main  -L/root/github/algorithm/binary/lib -rdynamic -lbinary -Wl,-rpath,/root/github/algorithm/binary/lib 

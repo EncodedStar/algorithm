@@ -1,0 +1,7 @@
+aux_source_directory (. SRC_LIST)
+add_library (binary_shared SHARED ${SRC_LIST})
+add_library (binary_static STATIC ${SRC_LIST})
+set_target_properties (binary_shared PROPERTIES OUTPUT_NAME "binary")
+set_target_properties (binary_static PROPERTIES OUTPUT_NAME "binary")
+#set (LIBRARY_OUTPUT_PATH ../lib)
+set (LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
