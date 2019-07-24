@@ -1,4 +1,7 @@
-# coding:utf-8
+#coding:utf-8
+import sys
+reload(sys) 
+sys.setdefaultencoding( "utf-8" ) 
 import itchat
 # itchat.auto_login()
 itchat.auto_login(enableCmdQR=2)
