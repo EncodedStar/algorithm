@@ -105,5 +105,6 @@ int main()
 		cout << a[i] << " ";
 	}
 	cout << endl;
+	cout << "hello" << endl;
 }
 

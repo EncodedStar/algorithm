@@ -1,7 +1,7 @@
 aux_source_directory (. SRC_LIST)
 
 # find testFunc.h
-include_directories (../testlib)
+include_directories (../binarylib)
 
 link_directories (${PROJECT_SOURCE_DIR}/lib)
 

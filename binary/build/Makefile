@@ -111,7 +111,7 @@ binary_shared: cmake_check_build_system
 
 # fast build rule for target.
 binary_shared/fast:
-	$(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/build
+	$(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/build
 .PHONY : binary_shared/fast
 
 #=============================================================================
@@ -124,7 +124,7 @@ binary_static: cmake_check_build_system
 
 # fast build rule for target.
 binary_static/fast:
-	$(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/build
+	$(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/build
 .PHONY : binary_static/fast
 
 #=============================================================================

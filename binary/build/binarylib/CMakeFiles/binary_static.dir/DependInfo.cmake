@@ -4,7 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/root/github/algorithm/binary/testlib/binary.cpp" "/root/github/algorithm/binary/build/testlib/CMakeFiles/binary_shared.dir/binary.cpp.o"
+  "/root/github/algorithm/binary/binarylib/binary.cpp" "/root/github/algorithm/binary/build/binarylib/CMakeFiles/binary_static.dir/binary.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

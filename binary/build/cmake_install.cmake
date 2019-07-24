@@ -34,7 +34,7 @@ ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/root/github/algorithm/binary/build/testlib/cmake_install.cmake")
+  INCLUDE("/root/github/algorithm/binary/build/binarylib/cmake_install.cmake")
   INCLUDE("/root/github/algorithm/binary/build/src/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)

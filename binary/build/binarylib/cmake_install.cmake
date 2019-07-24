@@ -1,4 +1,4 @@
-# Install script for directory: /root/github/algorithm/binary/testlib
+# Install script for directory: /root/github/algorithm/binary/binarylib
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

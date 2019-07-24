@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../src/../testlib/binary.h
+../src/../binarylib/binary.h
 iostream
 -
 string

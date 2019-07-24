@@ -72,14 +72,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /root/github/algorithm/binary/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/github/algorithm/binary/build/CMakeFiles /root/github/algorithm/binary/build/testlib/CMakeFiles/progress.marks
-	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 testlib/all
+	cd /root/github/algorithm/binary/build && $(CMAKE_COMMAND) -E cmake_progress_start /root/github/algorithm/binary/build/CMakeFiles /root/github/algorithm/binary/build/binarylib/CMakeFiles/progress.marks
+	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 binarylib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/github/algorithm/binary/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 testlib/clean
+	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 binarylib/clean
 .PHONY : clean
 
 # The main clean target
@@ -88,12 +88,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 testlib/preinstall
+	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 binarylib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 testlib/preinstall
+	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 binarylib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -102,31 +102,31 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-testlib/CMakeFiles/binary_shared.dir/rule:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 testlib/CMakeFiles/binary_shared.dir/rule
-.PHONY : testlib/CMakeFiles/binary_shared.dir/rule
+binarylib/CMakeFiles/binary_shared.dir/rule:
+	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 binarylib/CMakeFiles/binary_shared.dir/rule
+.PHONY : binarylib/CMakeFiles/binary_shared.dir/rule
 
 # Convenience name for target.
-binary_shared: testlib/CMakeFiles/binary_shared.dir/rule
+binary_shared: binarylib/CMakeFiles/binary_shared.dir/rule
 .PHONY : binary_shared
 
 # fast build rule for target.
 binary_shared/fast:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/build
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/build
 .PHONY : binary_shared/fast
 
 # Convenience name for target.
-testlib/CMakeFiles/binary_static.dir/rule:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 testlib/CMakeFiles/binary_static.dir/rule
-.PHONY : testlib/CMakeFiles/binary_static.dir/rule
+binarylib/CMakeFiles/binary_static.dir/rule:
+	cd /root/github/algorithm/binary/build && $(MAKE) -f CMakeFiles/Makefile2 binarylib/CMakeFiles/binary_static.dir/rule
+.PHONY : binarylib/CMakeFiles/binary_static.dir/rule
 
 # Convenience name for target.
-binary_static: testlib/CMakeFiles/binary_static.dir/rule
+binary_static: binarylib/CMakeFiles/binary_static.dir/rule
 .PHONY : binary_static
 
 # fast build rule for target.
 binary_static/fast:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/build
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/build
 .PHONY : binary_static/fast
 
 binary.o: binary.cpp.o
@@ -134,8 +134,8 @@ binary.o: binary.cpp.o
 
 # target to build an object file
 binary.cpp.o:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/binary.cpp.o
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/binary.cpp.o
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/binary.cpp.o
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/binary.cpp.o
 .PHONY : binary.cpp.o
 
 binary.i: binary.cpp.i
@@ -143,8 +143,8 @@ binary.i: binary.cpp.i
 
 # target to preprocess a source file
 binary.cpp.i:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/binary.cpp.i
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/binary.cpp.i
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/binary.cpp.i
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/binary.cpp.i
 .PHONY : binary.cpp.i
 
 binary.s: binary.cpp.s
@@ -152,8 +152,8 @@ binary.s: binary.cpp.s
 
 # target to generate assembly for a file
 binary.cpp.s:
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/binary.cpp.s
-	cd /root/github/algorithm/binary/build && $(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/binary.cpp.s
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/binary.cpp.s
+	cd /root/github/algorithm/binary/build && $(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/binary.cpp.s
 .PHONY : binary.cpp.s
 
 # Help Target

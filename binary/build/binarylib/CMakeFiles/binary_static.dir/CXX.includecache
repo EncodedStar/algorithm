@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/root/github/algorithm/binary/testlib/binary.cpp
+/root/github/algorithm/binary/binarylib/binary.cpp
 binary.h
-/root/github/algorithm/binary/testlib/binary.h
+/root/github/algorithm/binary/binarylib/binary.h
 
-/root/github/algorithm/binary/testlib/binary.h
+/root/github/algorithm/binary/binarylib/binary.h
 iostream
 -
 string

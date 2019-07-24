@@ -1,3 +1,3 @@
-/root/github/algorithm/binary/build/testlib/CMakeFiles/binary_shared.dir
-/root/github/algorithm/binary/build/testlib/CMakeFiles/binary_static.dir
+/root/github/algorithm/binary/build/binarylib/CMakeFiles/binary_shared.dir
+/root/github/algorithm/binary/build/binarylib/CMakeFiles/binary_static.dir
 /root/github/algorithm/binary/build/src/CMakeFiles/main.dir

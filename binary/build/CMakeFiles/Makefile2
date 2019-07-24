@@ -56,90 +56,90 @@ CMAKE_SOURCE_DIR = /root/github/algorithm/binary
 CMAKE_BINARY_DIR = /root/github/algorithm/binary/build
 
 #=============================================================================
-# Directory level rules for directory testlib
+# Directory level rules for directory binarylib
 
 # Convenience name for "all" pass in the directory.
-testlib/all: testlib/CMakeFiles/binary_shared.dir/all
-testlib/all: testlib/CMakeFiles/binary_static.dir/all
-.PHONY : testlib/all
+binarylib/all: binarylib/CMakeFiles/binary_shared.dir/all
+binarylib/all: binarylib/CMakeFiles/binary_static.dir/all
+.PHONY : binarylib/all
 
 # Convenience name for "clean" pass in the directory.
-testlib/clean: testlib/CMakeFiles/binary_shared.dir/clean
-testlib/clean: testlib/CMakeFiles/binary_static.dir/clean
-.PHONY : testlib/clean
+binarylib/clean: binarylib/CMakeFiles/binary_shared.dir/clean
+binarylib/clean: binarylib/CMakeFiles/binary_static.dir/clean
+.PHONY : binarylib/clean
 
 # Convenience name for "preinstall" pass in the directory.
-testlib/preinstall:
-.PHONY : testlib/preinstall
+binarylib/preinstall:
+.PHONY : binarylib/preinstall
 
 #=============================================================================
-# Target rules for target testlib/CMakeFiles/binary_shared.dir
+# Target rules for target binarylib/CMakeFiles/binary_shared.dir
 
 # All Build rule for target.
-testlib/CMakeFiles/binary_shared.dir/all:
-	$(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/depend
-	$(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/build
+binarylib/CMakeFiles/binary_shared.dir/all:
+	$(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/depend
+	$(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /root/github/algorithm/binary/build/CMakeFiles  1
 	@echo "Built target binary_shared"
-.PHONY : testlib/CMakeFiles/binary_shared.dir/all
+.PHONY : binarylib/CMakeFiles/binary_shared.dir/all
 
 # Include target in all.
-all: testlib/CMakeFiles/binary_shared.dir/all
+all: binarylib/CMakeFiles/binary_shared.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-testlib/CMakeFiles/binary_shared.dir/rule: cmake_check_build_system
+binarylib/CMakeFiles/binary_shared.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/github/algorithm/binary/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 testlib/CMakeFiles/binary_shared.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 binarylib/CMakeFiles/binary_shared.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/github/algorithm/binary/build/CMakeFiles 0
-.PHONY : testlib/CMakeFiles/binary_shared.dir/rule
+.PHONY : binarylib/CMakeFiles/binary_shared.dir/rule
 
 # Convenience name for target.
-binary_shared: testlib/CMakeFiles/binary_shared.dir/rule
+binary_shared: binarylib/CMakeFiles/binary_shared.dir/rule
 .PHONY : binary_shared
 
 # clean rule for target.
-testlib/CMakeFiles/binary_shared.dir/clean:
-	$(MAKE) -f testlib/CMakeFiles/binary_shared.dir/build.make testlib/CMakeFiles/binary_shared.dir/clean
-.PHONY : testlib/CMakeFiles/binary_shared.dir/clean
+binarylib/CMakeFiles/binary_shared.dir/clean:
+	$(MAKE) -f binarylib/CMakeFiles/binary_shared.dir/build.make binarylib/CMakeFiles/binary_shared.dir/clean
+.PHONY : binarylib/CMakeFiles/binary_shared.dir/clean
 
 # clean rule for target.
-clean: testlib/CMakeFiles/binary_shared.dir/clean
+clean: binarylib/CMakeFiles/binary_shared.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target testlib/CMakeFiles/binary_static.dir
+# Target rules for target binarylib/CMakeFiles/binary_static.dir
 
 # All Build rule for target.
-testlib/CMakeFiles/binary_static.dir/all:
-	$(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/depend
-	$(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/build
+binarylib/CMakeFiles/binary_static.dir/all:
+	$(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/depend
+	$(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/build
 	$(CMAKE_COMMAND) -E cmake_progress_report /root/github/algorithm/binary/build/CMakeFiles  2
 	@echo "Built target binary_static"
-.PHONY : testlib/CMakeFiles/binary_static.dir/all
+.PHONY : binarylib/CMakeFiles/binary_static.dir/all
 
 # Include target in all.
-all: testlib/CMakeFiles/binary_static.dir/all
+all: binarylib/CMakeFiles/binary_static.dir/all
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-testlib/CMakeFiles/binary_static.dir/rule: cmake_check_build_system
+binarylib/CMakeFiles/binary_static.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/github/algorithm/binary/build/CMakeFiles 1
-	$(MAKE) -f CMakeFiles/Makefile2 testlib/CMakeFiles/binary_static.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 binarylib/CMakeFiles/binary_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/github/algorithm/binary/build/CMakeFiles 0
-.PHONY : testlib/CMakeFiles/binary_static.dir/rule
+.PHONY : binarylib/CMakeFiles/binary_static.dir/rule
 
 # Convenience name for target.
-binary_static: testlib/CMakeFiles/binary_static.dir/rule
+binary_static: binarylib/CMakeFiles/binary_static.dir/rule
 .PHONY : binary_static
 
 # clean rule for target.
-testlib/CMakeFiles/binary_static.dir/clean:
-	$(MAKE) -f testlib/CMakeFiles/binary_static.dir/build.make testlib/CMakeFiles/binary_static.dir/clean
-.PHONY : testlib/CMakeFiles/binary_static.dir/clean
+binarylib/CMakeFiles/binary_static.dir/clean:
+	$(MAKE) -f binarylib/CMakeFiles/binary_static.dir/build.make binarylib/CMakeFiles/binary_static.dir/clean
+.PHONY : binarylib/CMakeFiles/binary_static.dir/clean
 
 # clean rule for target.
-clean: testlib/CMakeFiles/binary_static.dir/clean
+clean: binarylib/CMakeFiles/binary_static.dir/clean
 .PHONY : clean
 
 #=============================================================================
