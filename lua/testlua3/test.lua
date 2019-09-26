@@ -3,14 +3,16 @@ function sleep(n)
 end
 
 function Func ( i, f, str)
-	print("Func test")
+	print("func test")
 	print(i)
 	print(f)
 	print(str)
-	return i * f
+	return 100
 end
 
-price, str = c_func2(1024, "hxsoft")
+price, str = fff(6999, "nzhsoft")
 print(price)
 print(str)
 
+avg,sum=FFF(1,2,3,4,5)
+print("avg;",avg," sum:",sum)
