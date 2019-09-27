@@ -1,4 +1,4 @@
-function sleep(n)
+function l_sleep(n)
    os.execute("sleep " .. n)
 end
 
@@ -8,6 +8,10 @@ function Func ( i, f, str)
 	print(f)
 	print(str)
 	return i * f
+end
+
+function Func2()
+	print("Func test")
 end
 
 price, str = c_func2(1024, "hxsoft")

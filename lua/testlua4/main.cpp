@@ -7,6 +7,7 @@ extern "C"
 }
 #include <unistd.h>   
 #include <sys/time.h> 
+using namespace std;
 /* 有参无返回值*/
 int c_func1(lua_State *L)
 {
@@ -71,9 +72,31 @@ void test3()
 	printf("i = %d\n", i);
 	lua_close(L);
 }
+void test4()
+{
+	lua_State *L = luaL_newstate();
+	luaL_openlibs(L); //若无此, print 函数不可用。
+	luaL_dofile(L, "test.lua");
+	lua_getglobal(L, "Func2");
+	lua_pcall(L, 0, 0, 0);
+	lua_close(L);
+}
+void test5()
+{
+
+	cout << "start" << endl;
+	lua_State *L = luaL_newstate();
+	luaL_openlibs(L); //若无此, print 函数不可用。
+	luaL_dofile(L, "test.lua");
+	lua_getglobal(L, "l_sleep");
+	lua_pushinteger(L, 5);
+	lua_pcall(L, 1, 0, 0);
+	lua_close(L);
+	cout << "end" << endl;
+}
 
 int main()
 {
-	test3();
+	test5();
 	return 0;
 }
