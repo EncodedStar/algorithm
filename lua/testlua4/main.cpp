@@ -98,5 +98,9 @@ void test5()
 int main()
 {
 	test5();
+	for (int i = 0 ; i < 1; i++)
+	{
+		sleep(1);
+	}
 	return 0;
 }
