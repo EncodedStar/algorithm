@@ -1,0 +1,7 @@
+测试1: 用C++来调用C代码
+g++ -o test1 main.cpp test.c
+
+测试2: 用C来调用同一个C代码
+gcc -o test2 main.c test.c
+
+主要观察test.h里面巧妙添加的几个关键字
