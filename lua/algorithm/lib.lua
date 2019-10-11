@@ -84,3 +84,60 @@ end
 local loo = splitTable(",","1,2,3,4,5,6,7,8")
 
 print_r(loo)
+
+
+function serialize(obj)	--序列化 其他变string 	
+	local lua = ""
+	local t = type(obj) 
+	if t == "number" then 
+		lua = lua .. obj 
+	elseif t == "boolean" then 
+		lua = lua .. tostring(obj) 
+	elseif t == "string" then 
+		lua = lua .. string.format("%q", obj) 
+	elseif t == "table" then 
+		lua = lua .. "{\n" 
+		for k, v in pairs(obj) do 
+			lua = lua .. " [" .. serialize(k) .. "]=" .. serialize(v) .. ",\n" 
+		end 
+		local metatable = getmetatable(obj) 
+		if metatable ~= nil and type(metatable.__index) == "table" then 
+			for k, v in pairs(metatable.__index) do 
+				lua = lua .. "[" .. serialize(k) .. "]=" .. serialize(v) .. ",\n" 
+			end 
+		end 
+		lua = lua .. " }" 
+	elseif t == "nil" then 
+		return nil 
+	else 
+		error("can not serialize a " .. t .. " type.") 
+	end 
+
+	return lua 
+end
+
+function unserialize(lua)	--反序列化 string 变 其他 
+	local t = type(lua) 
+	if t == "nil" or lua == "" then 
+		return nil 
+	elseif t == "number" or t == "string" or t == "boolean" then 
+		lua = tostring(lua) 
+	else 
+		error("can not unserialize a " .. t .. " type.") 
+	end 
+
+	lua = "return " .. lua 
+	local func = load(lua)  --5.2之前用loadstring(lua)
+	if func == nil then 
+		return nil 
+	end 
+	return func() 
+end
+
+data = {["a"] = "a", ["b"] = "b", [1] = 1, [2] = 2, ["t"] = {1, 2, 3}} 
+local sz = serialize(data) 
+print(sz) 
+print("———") 
+print(type(sz)) 
+print(type(unserialize(sz)))
+print(serialize(unserialize(sz)))
