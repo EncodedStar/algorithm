@@ -1,0 +1,5 @@
+#!/bin/bash
+
+#locust -f client.py --no-web -c 10 -r 10
+/usr/bin/locust -f client.py --no-web -c $1 -r 10 > robot.log
+
